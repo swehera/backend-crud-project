@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Books</title>
+</head>
+<body>
+    <form action="/update/<%= book._id %>" method="post">
+        <input type="text" name="name" value="<%= book.name %>" placeholder="Book Name">
+        <input type="text" name="nameAuthor" value="<%= book.nameAuthor %>" placeholder="Author Name">
+        <button>Update Book</button>
+    </form>
+</body>
+</html>

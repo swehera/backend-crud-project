@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %> </title>
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="head-title">
+        <h1>My Book List for Study</h1>
+    </div>
+
+
+<!--
+    <div class="two-div">
+        <table class="tb-div">
+            <thead>
+                <tr>
+                    <td>S.NO</td>
+                    <td>Book Name</td>
+                    <td>Author</td>
+                    <td>Update</td>
+                    <td>Delete</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>ooo</td>
+                    <td>ooo</td>
+                    <td>ooo</td>
+                    <td><a href="#"><i class="fa-solid fa-pen-to-square"></i></a></td>
+                    <td><a href="#"><i class="fa-solid fa-trash"></i></a></td>
+                </tr>
+                <tr>
+                    <td>ooo</td>
+                    <td>ooo</td>
+                    <td>ooo</td>
+                    <td><a href="#"><i class="fa-solid fa-pen-to-square"></i></a></td>
+                    <td><a href="#"><i class="fa-solid fa-trash"></i></a></td>
+                </tr>
+                <tr>
+                    <td>ooo</td>
+                    <td>ooo</td>
+                    <td>ooo</td>
+                    <td><a href="#"><i class="fa-solid fa-pen-to-square"></i></a></td>
+                    <td><a href="#"><i class="fa-solid fa-trash"></i></a></td>
+                </tr>
+                <tr>
+                    <td>ooo</td>
+                    <td>ooo</td>
+                    <td>ooo</td>
+                    <td><a href="#"><i class="fa-solid fa-pen-to-square"></i></a></td>
+                    <td><a href="#"><i class="fa-solid fa-trash"></i></a></td>
+                </tr>
+            </tbody>
+        </table>
+        <a href="/add" class="btn">Add Book</a>
+    </div>
+
+
+-->
+
+    <!--EJS For Backend-->
+
+    <% if (books!="") { %>
+        <div class="two-div">
+            <table class="tb-div">
+                <thead>
+                    <tr>
+                        <th>S.NO</th>
+                        <th>Book Name</th>
+                        <th>Author</th>
+                        <th>Update</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% books.forEach((book, index) => { %>
+                        <tr>
+                            <td><%= index +1 %></td>
+                            <td><%= book.name %></td>
+                            <td><%= book.nameAuthor %></td>
+                            <td><a href="/edit/<%= book._id %>"><i class="fa-solid fa-pen-to-square"></i></a></td>
+                            <td><a href="/delete/<%= book._id %>"><i class="fa-solid fa-trash"></i></a></td>
+                        </tr>
+                    <% }) %>
+                </tbody>
+            </table>
+            <a href="/add" class="btn">Add Book</a>
+        </div>
+
+    <% } else{ %>
+            <h1>No Books Found</h1>
+            <a href="/add" class="btn">Add Book</a>
+    <% } %>
+
+
+
+
+
+
+
+
+
+
+     
+
+</body>
+</html>

@@ -1,0 +1,62 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.head-title{
+    background-color: #31005C;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 25px;
+    color: white;
+}
+
+
+/*Tabel Css*/
+.two-div {
+    margin: 30px 40px 20px;
+    display: flex;
+}
+
+.two-div .tb-div {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 18px;
+    color: white;
+}
+
+.two-div .tb-div thead {
+    background-color: #662D91;
+}
+.two-div .tb-div tbody tr{
+    background-color: #5F0572;
+}
+
+.two-div .tb-div tbody tr:nth-child(even) {
+    background-color: #93278F;
+}
+
+.two-div .tb-div thead tr td,
+.two-div .tb-div tbody tr td{
+    padding: 10px 20px;
+    border: 1px solid gray;
+}
+
+.two-div .tb-div tbody tr td a {
+    text-decoration: none;
+    color: white;
+}
+
+.btn {
+    text-decoration: none;
+    padding: 10px 20px;
+    color: white;
+    background-color: #31005C;
+    height: fit-content;
+    margin-left: 30px;
+    clear: both;
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+}
